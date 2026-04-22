@@ -4,9 +4,7 @@
 
 ## 一、 先把公式写出来
 
-$$
-X(\omega)=\int_{-\infty}^{\infty} x(t)e^{-j\omega t}dt
-$$
+$$X(\omega)=\int_{-\infty}^{\infty}x(t)e^{-j\omega t}dt$$
 
 ## 二、 把它拆成三个动作（非常关键）
 
@@ -14,9 +12,7 @@ $$
 
 ### ① 乘：对齐频率（“试频率”）
 
-$$
-x(t) \cdot e^{-j\omega t}
-$$
+$$x(t)\cdot e^{-j\omega t}$$
 
 * **$x(t)$**：你的信号
 * **$e^{-j\omega t}$**：一个“转圈模板”（频率 = $\omega$）
@@ -24,18 +20,14 @@ $$
 
 ### ② 加：累加结果（“看会不会抵消”）
 
-$$
-\int (\cdot) dt
-$$
+$$\int(\cdot)dt$$
 
 * **在做什么**：把每一时刻的结果加起来。
 * **意义**：相当于“长期观察这个匹配效果”。
 
 ### ③ 得到一个数：匹配强度
 
-$$
-X(\omega)
-$$
+$$X(\omega)$$
 
 * **表示**：这个频率在信号里“有多强”。
 
@@ -74,10 +66,10 @@ $$
 因为乘完后会变成：
 
 * **✔ 同频**：
-$$e^{j\omega t} \cdot e^{-j\omega t} = 1$$
+$$e^{j\omega t}\cdot e^{-j\omega t}=1$$
     👉 不转 → 全部同方向 → 加起来大。
 * **✔ 异频**：
-$$e^{j\omega_1 t} \cdot e^{-j\omega t} = e^{j(\omega_1-\omega)t}$$
+$$e^{j\omega_1 t}\cdot e^{-j\omega t}=e^{j(\omega_1-\omega)t}$$
     👉 在转 → 各方向都有 → 抵消。
 
 ---
@@ -92,7 +84,7 @@ $$e^{j\omega_1 t} \cdot e^{-j\omega t} = e^{j(\omega_1-\omega)t}$$
 ## 七、 为什么要“对所有 $\omega$ 都做”
 
 * **因为**：你不知道信号里有哪些频率。
-* **所以必须**：从 $\omega = -\infty$ 到 $+\infty$ **全部试一遍**。
+* **所以必须**：从 $\omega=-\infty$ 到 $+\infty$ **全部试一遍**。
 
 ---
 
